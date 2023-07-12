@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset = "UTF-8">
+       <meta name = "Description" content = "Coin flipping, coin tossing, or heads or tails is the practice of throwing a coin in the air and checking which side is showing when it lands, in order to choose between two alternatives, heads or tails, sometimes used to resolve a dispute between two parties. It is a form of sortition which inherently has two possible">
+       <meta name = "Author" content = "Id, Phonenumber">
+       <meta name = "Keywords" content = "Heads, Tails, Autoplay">
+       <meta name = "Viewport" content = "width=device-width, initial-scale=1.0">
+       <title>Coin Flipping</title>
+       <style>
+          .header-style1 {
+            color: white;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .image-style {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 3px 3px 3px gray;
+          }
+          .div-style1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+          }
+          .header-style2 {
+            color: white;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+          }
+          .div-style2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+          }
+          .button-style {
+            color: black;
+            background-color: white;
+            padding: 7px 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            box-shadow: 3px 3px 3px gray;
+          }
+          .div-style {
+            margin-left: 1fr;
+            margin-right: 1fr;
+            margin-top: 1fr;
+            margin-bottom: 1fr;
+            border-radius: 10px;
+        }
+          body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .div-style {
+            border: 2px solid white;
+            padding: 15px 70px;
+            margin-top: 100px;
+            box-shadow: 5px 5px 3px gray;
+        }
+       </style>
+    </head>
+    <body>
+      <div class = "div-style">
+          <h2 class = "header-style1">Flip a Coin</h2>
+          <div class = "div-style1">
+              <img src = "https://th.bing.com/th/id/OIP.XNfmgCBuSiZH8zrf96X-6wHaHa?pid=ImgDet&rs=1" class = "js-image image-style">
+            </div>
+            <h2 class = "header-style2 js-result"></h2>
+            <div class = "div-style2">
+                <button class = "js-button button-style" onclick = "but1()">Flipcoin</button>
+            </div>
+        </div>
+       <script>
+           function but1() {
+             setTimeout ( () => {
+                 let image1 = document.querySelector('.js-image');
+                 let output = document.querySelector('.js-result');
+                 let randNum = Math.random();
+              let result = '';
+              if (randNum > 0 && randNum <= 1 / 2) {
+                  result = "Heads";
+              }
+              else {
+                  result = "Tails";
+              }
+              if (result === "Heads") {
+                 image1.src = "https://en.numista.com/catalogue/photos/inde/3180-original.jpg";
+                 output.innerHTML = result;
+                }
+                else {
+                  image1.src = "https://en.numista.com/catalogue/photos/inde/2409-original.jpg";
+                  output.innerHTML = result;
+                }
+                if (result === "Heads") {
+                    alert(`${result}!`);
+                }
+                else {
+                    alert(`${result}!`);
+                }
+               }, 3000);
+            }
+            </script>
+    </body>
+</html>
